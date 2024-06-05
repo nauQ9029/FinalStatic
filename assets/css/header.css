@@ -1,0 +1,124 @@
+/*--------------------HEADER--------------------*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+.container-header {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; /* Added padding to ensure no overflow */
+    padding-right: 15px; /* Added padding to ensure no overflow */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1b3661;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    z-index: 1000;
+}
+
+header h3 {
+    color: #fffdfde7;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+header input {
+    margin-right: 2%;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+header button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+header .btn {   
+    color: #1b3661;
+    background-color: #fffdfde7;
+}
+
+header .submitbut {
+    border-radius: 15px;
+    margin-top: -2px;
+}
+
+header .btn:hover {
+    background-color: #fffdfd54;
+}
+
+.upfloor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allows items to wrap and prevent overflow */
+}
+
+.upfloor .search-bar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.upfloor .button {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Allows buttons to wrap and prevent overflow */
+}
+
+.botfloor {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-bottom: 10px;
+    margin: 0 20px;
+}
+
+.botfloor .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows nav links to wrap and prevent overflow */
+}
+
+.botfloor a {
+    color: #fffdfde7;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 1%;
+    padding: 5px 63px;
+    text-decoration: none;  
+    transition: background-color 0.2s;
+}
+
+.botfloor a:hover {
+    background-color: #fffdfd54;
+}
+
+/* Ensures no horizontal scrollbar on small screens */
+@media (max-width: 768px) {
+    .upfloor, .botfloor .nav {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .botfloor a {
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+}

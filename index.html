@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="vn">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QTALD - Website đặt vé máy bay pro vjp FPT</title>
+
+    <!-- Bootstrap JS and dependencies -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/54f0cb7e4a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="assets/css/header.css" rel="stylesheet" />
+    <link href="assets/css/login.css" rel="stylesheet" />
+    <link href="assets/css/signup.css" rel="stylesheet" />
+
+    <link href="assets/css/body.css" rel="stylesheet" />
+
+    <link href="assets/css/footer.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header-content">
+      <div class="container-header">
+        <div class="upfloor">
+          <h3 class="col-md-2">QTALD</h3>
+
+          <form class="search-bar col-md-6 row" action="">
+            <input class="col-md-8" type="text" placeholder="Tìm kiếm" />
+            <button class="col-md-3 submitbut" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+
+          <div class="button col-md-2 d-flex justify-content-end">
+            <button class="col-md-6 btn btn-primary" id="loginBtn">
+              Đăng nhập
+            </button>
+            <button class="col-md-5 btn btn-primary" id="signupBtn">
+              Đăng kí
+            </button>
+          </div>
+
+          <!-- The Modal login -->
+          <div class="log form-container animate__animated animate__fadeInUp">
+            <span id="closeModalBtnLI" class="close">&times;</span>
+            <form id="formLI" class="form-section">
+              <h2>LOGIN</h2>
+              <div class="form-input">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="usernameLI"
+                  name="username"
+                  placeholder="Enter Username"
+                />
+                <small>Error message</small>
+              </div>
+              <div class="form-input">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="passwordLI"
+                  placeholder="Enter Password"
+                />
+                <small>Error message</small>
+              </div>
+              <div class="form-submit">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- The Modal signup -->
+          <div class="sig form-container animate__animated animate__fadeInUp">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <form id="form" class="form-section">
+              <h2>CREATE ACCOUNT</h2>
+              <div class="form-input">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Enter Username"
+                />
+                <small>Error message</small>
+              </div>
+              <div class="form-input">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email" />
+                <small>Error message</small>
+              </div>
+              <div class="form-input">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter Password"
+                />
+                <small>Error message</small>
+              </div>
+              <div class="form-input">
+                <label for="password2">Confirm Password</label>
+                <input
+                  type="password"
+                  id="password2"
+                  placeholder="Enter Password again"
+                />
+                <small>Error message</small>
+              </div>
+              <div class="form-submit">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="botfloor nav-links row">
+          <div class="col text-center">
+            <nav class="nav justify-content-left">
+              <a class="nav-link active" href="#">Khách sạn</a>
+              <a class="nav-link" href="#">Chuyến bay</a>
+              <a class="nav-link" href="#">Chuyến bay & Khách sạn</a>
+              <a class="nav-link" href="#">Thuê xe</a>
+              <a class="nav-link" href="#">Địa điểm tham quan</a>
+              <a class="nav-link" href="#">Taxi sân bay</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Body Section -->
+    <main>
+      <!-- 1 - Carousel Section -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="4000"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/caurong.jpg" class="d-block w-100" alt="Slide 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/hand.jpg" class="d-block w-100" alt="Slide 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/city.jpg" class="d-block w-100" alt="Slide 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/saigoncity.jpg" class="d-block w-100" alt="Slide 4" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/causonghan.jpg" class="d-block w-100" alt="Slide 5" />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $(".carousel").carousel();
+        });
+      </script>
+
+      <!-- 2 - Offers Section -->
+      <section class="offers my-5">
+        <div class="container-body">
+          <h2 class="text-center">Special Offers</h2>
+          <ul class="offers-nav list-unstyled d-flex align-items-center">
+            <li class="flex-fill">
+              <div class="row">
+                <div class="col-md-6 offer-card active">
+                  <a href="https://youtu.be/L8XbI9aJOXk">
+                    <div class="card mb-4">
+                      <img
+                        src="img/caurong.jpg"
+                        class="card-img-top"
+                        alt="Offer 1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Offer 1</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6 offer-card active">
+                  <a href="https://youtu.be/L8XbI9aJOXk">
+                    <div class="card mb-4">
+                      <img
+                        src="img/hand.jpg"
+                        class="card-img-top"
+                        alt="Offer 2"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Offer 2</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3 - Explore Section -->
+      <section class="explore my-5">
+        <div class="container-body">
+          <h2 class="text-center">Explore</h2>
+          <p class="text-center">
+            These popular destinations have a lot to offer
+          </p>
+          <ul class="explores-nav list-unstyled d-flex align-items-center">
+            <li>
+              <button id="prevExplore" class="btn btn-link">
+                <svg
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-chevron-left"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="explore-cards">
+              <div class="row" id="exploreOffersContainer">
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/caurong.jpg"
+                      class="card-img-top"
+                      alt="Place 1"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 1</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/hand.jpg"
+                      class="card-img-top"
+                      alt="Explore 2"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 2</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/city.jpg"
+                      class="card-img-top"
+                      alt="Explore3"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 3</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/saigoncity.jpg"
+                      class="card-img-top"
+                      alt="explore 4"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 4</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/causonghan.jpg"
+                      class="card-img-top"
+                      alt="explore 5"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 5</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/saigoncity.jpg"
+                      class="card-img-top"
+                      alt="explore 6"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 6</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/city.jpg"
+                      class="card-img-top"
+                      alt="explore 7"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 7</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 explore-card">
+                  <div class="card mb-4">
+                    <img
+                      src="img/hand.jpg"
+                      class="card-img-top"
+                      alt="explore 8"
+                    />
+                    <div class="card-body">
+                      <a href="https://youtu.be/L8XbI9aJOXk">
+                        <h5 class="card-title">Offer 8</h5>
+                        <p class="card-text">Details of the special offer.</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button id="nextExplore" class="btn btn-link">
+                <svg
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-chevron-right"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4 - Trending Section -->
+      <section class="exploration my-5">
+        <div class="container-body">
+          <h2 class="text-center">Trending Tourist Spots</h2>
+          <p class="text-center">Most popular choices for travelers</p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Tourist Spot 1</h5>
+                  <p class="card-text">Description of the tourist spot.</p>
+                </div>
+                <img
+                  src="img/causonghan.jpg"
+                  class="card-img-bottom"
+                  alt="Tourist Spot 1"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Tourist Spot 2</h5>
+                  <p class="card-text">Description of the tourist spot.</p>
+                </div>
+                <img
+                  src="img/city.jpg"
+                  class="card-img-bottom"
+                  alt="Tourist Spot 2"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Tourist Spot 3</h5>
+                  <p class="card-text">Description of the tourist spot.</p>
+                </div>
+                <img
+                  src="img/hand.jpg"
+                  class="card-img-bottom"
+                  alt="Tourist Spot 3"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Tourist Spot 4</h5>
+                  <p class="card-text">Description of the tourist spot.</p>
+                </div>
+                <img
+                  src="img/saigoncity.jpg"
+                  class="card-img-bottom"
+                  alt="Tourist Spot 4"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Tourist Spot 5</h5>
+                  <p class="card-text">Description of the tourist spot.</p>
+                </div>
+                <img
+                  src="img/caurong.jpg"
+                  class="card-img-bottom"
+                  alt="Tourist Spot 5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5 - Searching willing tour -->
+      <section class="willing">
+        <div class="container-body">
+          <div class="row content">
+            <div
+              id="myCarousel"
+              class="col-md-7 carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/caurong.jpg"
+                    class="d-block w-100"
+                    alt="Description of image"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/causonghan.jpg"
+                    class="d-block w-100"
+                    alt="Description of image"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/hand.jpg"
+                    class="d-block w-100"
+                    alt="Description of image"
+                  />
+                </div>
+              </div>
+            </div>
+            <form class="col-md-3" action="">
+              <h1>Điểm đến cần tìm</h1>
+              <p>Điểm đến:</p>
+              <select name="" id="">
+                <option value="#">--Chọn địa điểm--</option>
+                <option value="">Hồ Chí Minh</option>
+                <option value="">Đà Nẵng</option>
+                <option value="">Nha Trang</option>
+                <option value="">Phú Quốc</option>
+              </select>
+              <p>Số người:</p>
+              <input
+                type="number"
+                min="1"
+                placeholder="Bạn đi bao nhiêu người"
+              />
+              <p>Ngày đi:</p>
+              <input type="date" />
+              <p>Ngày về:</p>
+              <input type="date" />
+              <button type="submit">Tìm kiếm</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 - Các điểm đến được chúng tôi ưa thích -->
+      <section class="favorite">
+        <div class="container-body">
+          <h2 class="text-center">Các điểm đến được ưa thích</h2>
+          <div class="fav">
+            <div class="fav-link-group">
+              <a href="#" id="KV">Khu vực</a>
+              <a href="#" id="TP">Thành phố</a>
+              <a href="#" id="QT">Được quan tâm nhất</a>
+            </div>
+            <ul class="fav-item-group">
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Hà Nội</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">TP. Hồ Chí Minh</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Đà Nẵng</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item last fl">
+                <a class="fav-link" href="#">Thừa Thiên Huế</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Quảng Trị</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Quảng Bình</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Quảng Nam</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item last fl">
+                <a class="fav-link" href="#">Bình Dương</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Quảng Nam</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item last fl">
+                <a class="fav-link" href="#">Bình Dương</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+              <li class="fav-item fl">
+                <a class="fav-link" href="#">Vũng Tàu</a>
+                <span class="fav-detail">Detal about it</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 - Why to choose section-->
+      <section class="whytochoose">
+        <div class="container-body">
+          <h2 class="text-center">Lý do bạn nên chọn QTALD</h2>
+          <div class="cont">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="img/why1.jpg" alt="Diverse Choice" />
+                <h3>Đa dạng sự lựa chọn</h3>
+                <p>
+                  Tìm kiếm niềm vui với gần nửa triệu điểm tham quan, phòng
+                  khách sạn và nhiều trải nghiệm thú vị.
+                </p>
+              </div>
+              <div class="col-md-3">
+                <img src="img/why2.png" alt="Best Prices" />
+                <h3>Giá tốt, vui hết mình</h3>
+                <p>Trải nghiệm chất lượng với giá tốt, giá siêu tiết kiệm.</p>
+              </div>
+              <div class="col-md-3">
+                <img src="img/why3.jpg" alt="Easy and Comfort" />
+                <h3>Dễ dàng thao tác</h3>
+                <p>
+                  Đặt vé xác nhận ngay, miễn xếp hàng, miễn phí hủy, tiện lợi
+                  cho bạn tha hồ khám phá.
+                </p>
+              </div>
+              <div class="col-md-3">
+                <img src="img/why4.jpg" alt="Trustful" />
+                <h3>Được tín nhiệm lâu năm</h3>
+                <p>
+                  Tham khảo đánh giá chân thực. Dịch vụ hỗ trợ tận tình, đồng
+                  hành cùng bạn mọi lúc, mọi nơi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-push-6 col-md-push-6 footer_col"
+          >
+            <div class="contact_footer">
+              <h4 class="footer-title">Giới thiệu</h4>
+              <ul class="footer-linklists">
+                <li>
+                  <a href="#" title="Về chúng tôi">Về chúng tôi</a>
+                </li>
+                <li>
+                  <a href="#" title="Khuyến mãi">Khuyến mãi</a>
+                </li>
+                <li>
+                  <a href="#" title="Chuyện bên lề">Chuyện bên lề</a>
+                </li>
+                <li>
+                  <a href="#" title="Tuyển dụng">Tuyển dụng</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-lg-pull-6 col-md-pull-6 footer_col"
+          >
+            <div class="policy-footer">
+              <h4 class="footer-title">Điều khoản</h4>
+              <ul class="footer-linklists">
+                <li>
+                  <a href="#" title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+                </li>
+                <li>
+                  <a href="#" title="Chính sách bảo mật thông tin"
+                    >Chính sách bảo mật thông tin</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-push-6 col-md-push-6 footer_col footer_right"
+          >
+            <div class="about-footer">
+              <h4 class="footer-title">Về chúng tôi</h4>
+              <p>
+                1900 xxxx
+                <br />
+                yourmail@gmail.com
+                <br />
+                Ngũ Hành Sơn, Đà Nẵng
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-push-6 col-md-push-6 footer_col"
+          >
+            <div class="social-footer">
+              <h4 class="footer-title">Mạng xã hội</h4>
+              <ul class="footer-social-links">
+                <li>
+                  <a href="#">
+                    <img src="img/FB.png" alt="Facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/INSTAGRAM.png" alt="Instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/X.jpg" alt="Twitter" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/mycode.js"></script>
+  </body>
+</html>
